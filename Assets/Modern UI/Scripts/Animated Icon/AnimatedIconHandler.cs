@@ -45,6 +45,21 @@ namespace Michsky.UI.ModernUIPack
             }
         }
 
+         public void OnHovar()
+        {
+            if (onHovar == true)
+            {
+                iconAnimator.Play("Out");
+                onHovar = false;
+            }
+
+            else
+            {
+                iconAnimator.Play("In");
+                onHovar = true;
+            }
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (playType == PlayType.ON_POINTER_ENTER)
