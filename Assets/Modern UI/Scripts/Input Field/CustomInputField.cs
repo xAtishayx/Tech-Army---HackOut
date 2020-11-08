@@ -51,6 +51,25 @@ namespace Michsky.UI.ModernUIPack
                 inputFieldAnimator.Play(outAnim);
             }
         }
+        Void AnimateText()
+         {
+            inputFieldAnimator = gameObject.GetComponent<Animator>();
+            inputText = gameObject.GetComponent<TMP_InputField>();
+
+            // Check if text is empty or not
+            if (inputText.text.Length == 0 || inputText.text.Length <= 0)
+                isEmpty = true;
+
+            else
+                isEmpty = false;
+
+            // Animate if it's empty
+            if (isEmpty == true)
+                inputFieldAnimator.Play(outAnim);
+
+            else
+                inputFieldAnimator.Play(inAnim);
+        }
 
         public void Animate()
         {

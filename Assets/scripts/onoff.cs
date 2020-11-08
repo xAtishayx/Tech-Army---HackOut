@@ -40,4 +40,8 @@ public class onoff : MonoBehaviour
             tuner = true;
         }
     }
+public void minimapzoom()
+    {
+        secondcam.orthographicSize = slider.value ;
+    }
 }
